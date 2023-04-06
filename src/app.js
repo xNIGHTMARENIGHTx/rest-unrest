@@ -1,6 +1,6 @@
 import express from 'express';
 
-import userRouter from './resources/users/user.router.js';
+import userRouter from './resources/clients/client.router.js';
 
 const app = express();
 
@@ -14,6 +14,6 @@ app.use('/', (req, res, next) => {
   next();
 });
 
-app.use('/users', userRouter);
+app.use('/clients', userRouter);
 
 export default app;
