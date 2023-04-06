@@ -1,6 +1,6 @@
 import express from 'express';
 
-import userRouter from './resources/users/user.router.js';
+import userRouter from './resources/clients/client.router.js';
 
 const app = express();
 
