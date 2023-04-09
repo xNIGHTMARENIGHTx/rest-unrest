@@ -16,6 +16,7 @@ const getById = async (id) => users.find((user) => user.id === id);
 const create = async ({name, surname, CT, login, password}) =>{
   const user = new User({name, surname, CT, login, password});
   users.push(user);
+  return user;
 }
 
 const deleteById = async (id) => {
@@ -23,9 +24,11 @@ const deleteById = async (id) => {
   
   if(pos === -1) return null;
 
+  const client = users[pos];
+
   users.splice(pos,1);
 
-  return null;
+  return client;
 }
 
 const update = async ({id, name, surname, CT, login, password}) =>{
@@ -33,7 +36,10 @@ const update = async ({id, name, surname, CT, login, password}) =>{
 
   if(pos === -1) return null;
 
-  return {...users[pos], name, surname, CT, login, password}
+  const newu = {...users[pos], name, surname, CT, login, password};
+
+  users.splice(pos, 1, newu);
+  return newu;
 }
 
 export { 
