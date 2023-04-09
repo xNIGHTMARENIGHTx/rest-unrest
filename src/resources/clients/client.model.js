@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-class User {
+class Client {
   constructor({name = 'USER', surname = "Surname", CT = "Contact info", login = 'user', password = 'P@55w0rd' } = {}) {
     this.id = uuidv4();
     this.name = name;
@@ -16,4 +16,4 @@ class User {
   }
 }
 
-export default User;
+export default Client;

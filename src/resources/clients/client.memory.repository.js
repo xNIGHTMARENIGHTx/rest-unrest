@@ -1,7 +1,7 @@
-import User from "./client.model.js";
+import Client from "./client.model.js";
 
 const users = [
-  new User({name: "as",
+  new Client({name: "as",
   surname: "sa",
   CT: "coadsa",
   login: "test1",
@@ -14,7 +14,7 @@ const getAll = async () => users;
 const getById = async (id) => users.find((user) => user.id === id);
 
 const create = async ({name, surname, CT, login, password}) =>{
-  const user = new User({name, surname, CT, login, password});
+  const user = new Client({name, surname, CT, login, password});
   users.push(user);
   return user;
 }
