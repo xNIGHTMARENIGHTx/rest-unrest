@@ -19,19 +19,29 @@ const create = async ({
     PM
   })
   orders.push(order);
+  return order;
 }
 
 const deleteById = async (id) =>{
   const pos = orders.findIndex(order => order.id === id);
+
+  if(pos === -1) return null;
+
+  const old = orders[pos];
   orders.splice(pos,1);
+  return old;
 }
 
 const update = async ({id, ClientId, TourId, PM}) =>{
   const pos = orders.findIndex(order => order.id === id);
 
-  const old = orders[pos];
+  if(pos === -1) return null;
 
-  orders.splice(pos, 1, {...old, ClientId, TourId, PM});
+  const old = orders[pos];
+  const newor = {...old, ClientId, TourId, PM};
+
+  orders.splice(pos, 1, newor);
+  return newor;
 }
 
 const deleteByClientId = async (ClientId) =>{
