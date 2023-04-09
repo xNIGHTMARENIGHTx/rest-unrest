@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 
 class User {
-  constructor({ id = uuidv4(), name = 'USER', surname = "Surname", CT = "Contact info", login = 'user', password = 'P@55w0rd' } = {}) {
-    this.id = id;
+  constructor({name = 'USER', surname = "Surname", CT = "Contact info", login = 'user', password = 'P@55w0rd' } = {}) {
+    this.id = uuidv4();
     this.name = name;
     this.surname = surname;
     this.CT = CT;
