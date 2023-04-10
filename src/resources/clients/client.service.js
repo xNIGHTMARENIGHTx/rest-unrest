@@ -1,5 +1,5 @@
 import * as clientsRepo from './client.memory.repository.js';
-import * as odersRepo from "../orders/order.memory.repository.js"
+import * as ordersRepo from "../orders/order.memory.repository.js"
 
 const getAll = () => clientsRepo.getAll();
 const getById = (id) => clientsRepo.getById(id);
@@ -8,7 +8,7 @@ const createClient= ({name, surname, CT, login, password}) =>
 const deleteById = async (id) =>{
     const client = await clientsRepo.getById(id);
     clientsRepo.deleteById(id);
-    odersRepo.deleteByClientId(id);
+    ordersRepo.deleteByClientId(id);
 
     return client;
 }
