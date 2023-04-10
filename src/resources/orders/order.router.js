@@ -6,7 +6,7 @@ import * as ordersService from './order.service.js';
 
 const router = Router();
 
-router.route('/').get(async (req, res) => {
+router.route('/').get(async (_req, res) => {
   const users = await ordersService.getAll();
 
   res.json(users.map(Order.toResponse));
