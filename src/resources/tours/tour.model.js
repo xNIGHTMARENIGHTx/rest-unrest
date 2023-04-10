@@ -10,8 +10,8 @@ class Tour {
     this.agentId = agentId;
   }
 
-  static toResponse(user) {
-    const { id, name, country, price, duration, agentId } = user;
+  static toResponse(tour) {
+    const { id, name, country, price, duration, agentId } = tour;
     return { id, name, country, price, duration, agentId };
   }
 }
