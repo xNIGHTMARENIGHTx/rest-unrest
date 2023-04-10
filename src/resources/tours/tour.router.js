@@ -1,23 +1,23 @@
 import { Router } from 'express';
 import { StatusCodes } from "http-status-codes";
 
-import Client from './client.model.js';
-import * as clientsService from './client.service.js';
+import Tour from './tour.model.js';
+import * as toursService from './tour.service.js';
 
 const router = Router();
 
 router.route('/').get(async (_req, res) => {
-  const users = await clientsService.getAll();
-  res.json(users.map(Client.toResponse));
+  const tours = await toursService.getAll();
+  res.json(tours.map(Tour.toResponse));
 });
 
 router.route("/").post(async (req, res) =>{
-  const {name, surname, CT, login, password} = req.body;
+  const {name, country, price, duration, agentId} = req.body;
 
-  const client = await clientsService.createClient({name, surname, CT, login, password});
+  const tour = await toursService.createTour({name, country, price, duration, agentId});
 
-  if(client){
-    res.status(StatusCodes.CREATED).json(Client.toResponse(client));
+  if(tour){
+    res.status(StatusCodes.CREATED).json(Tour.toResponse(tour));
   }
   else{
     res.status(StatusCodes.BAD_REQUEST).json({ code: `${StatusCodes.BAD_REQUEST}`, msg: 'Client not created' });
@@ -27,10 +27,10 @@ router.route("/").post(async (req, res) =>{
 router.route("/:id").get(async (req, res) =>{
   const { id } = req.params;
 
-  const client = await clientsService.getById(id);
+  const tour = await toursService.getById(id);
 
-  if(client){
-    res.status(StatusCodes.OK).json(Client.toResponse(client));
+  if(tour){
+    res.status(StatusCodes.OK).json(Tour.toResponse(tour));
   }
   else{
     res.status(StatusCodes.NOT_FOUND).json({ code:`${StatusCodes.NOT_FOUND}`, msg: "Client not found"});
@@ -39,12 +39,12 @@ router.route("/:id").get(async (req, res) =>{
 
 router.route("/:id").put(async (req, res) =>{
   const { id } = req.params;
-  const { name, surname, CT, login, password } = req.body;
+  const {name, country, price, duration, agentId} = req.body;
 
-  const client = await clientsService.update({ id, name, surname, CT, login, password});
+  const tour = await toursService.update({ id, name, country, price, duration, agentId});
 
-  if(client){
-    res.status(StatusCodes.OK).json(Client.toResponse(client));
+  if(tour){
+    res.status(StatusCodes.OK).json(Tour.toResponse(tour));
   }
   else{
     res.status(StatusCodes.NOT_FOUND).json({ code:`${StatusCodes.NOT_FOUND}`, msg: "Client not found"});
@@ -54,9 +54,9 @@ router.route("/:id").put(async (req, res) =>{
 router.route("/:id").delete(async (req, res) =>{
   const { id } = req.params;
 
-  const client = await clientsService.deleteById(id);
+  const tour = await toursService.deleteById(id);
 
-  if(client){
+  if(tour){
     res.status(StatusCodes.NO_CONTENT).json({ code: `${StatusCodes.NO_CONTENT}`, msg: 'User has been deleted' });
   }
   else{
