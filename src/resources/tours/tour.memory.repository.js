@@ -42,11 +42,19 @@ const update = async ({id, name, country, price, duration, agentId}) =>{
   return newt;
 }
 
+const deleteAgentId = async (agentId) => {
+  const toDeleteFrom = tours.filter(tour => tour.agentId === agentId);
+
+  await Promise.allSettled( toDeleteFrom.map(async (tour) => update(
+    {id: tour.id, name: tour.name, country: tour.country, price: tour.price, duration: tour.duration, agentId: null})))
+}
+
 export { 
   tours,
   getAll,
   getById,
   create,
   deleteById,
-  update 
+  update,
+  deleteAgentId
 };
