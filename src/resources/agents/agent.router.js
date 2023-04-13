@@ -14,7 +14,7 @@ router.route('/').get(async (_req, res) => {
 router.route("/").post(async (req, res) =>{
   const { name, surname, salary, phonenum, email, login } = req.body;
 
-  const agent = await clientsService.createClient({ name, surname, salary, phonenum, email, login });
+  const agent = await clientsService.createAgent({ name, surname, salary, phonenum, email, login });
 
   if(agent){
     res.status(StatusCodes.CREATED).json(Agent.toResponse(agent));
