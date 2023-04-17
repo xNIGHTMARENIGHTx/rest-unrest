@@ -31,20 +31,26 @@ p {
     width: 100vw;
     height: 23px;
     border-bottom: 2px red solid;
-    background-color: var(--black);
     display: flex;
     justify-content: space-between;
-    animation: menu-glow 5s infinite;
+    animation: menu-glow 10s infinite;
 }
 
 .menu button {
     background-color: transparent;
-    border: none;
+    border: 0 transparent solid;
     padding: 0;
 }
 
+.menu img:hover{
+    box-shadow: 0 0 2px 2px red;
+}
+
 .menu img {
-    height: 24px;
+    border: 1px var(--red-dark) solid;
+    animation: menu-glow 10s;
+    height: 23px;
+    transition: all 0.2s ease-in-out;
 }
 
 .pic-holder {
