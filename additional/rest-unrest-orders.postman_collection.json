@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "d233f246-3cf1-41ca-92cb-df1cf1ef117a",
+		"name": "rest-unrest/orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26821021"
+	},
+	"item": [
+		{
+			"name": "orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/orders/7720019f-2cb7-4b93-94b7-601e947119c6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders",
+						"7720019f-2cb7-4b93-94b7-601e947119c6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"dsasaddasda\",\r\n        \"ClientId\": \"dasdasdas\",\r\n        \"TourId\": \"null\",\r\n        \"PM\": \"aasdaads\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"b8a7a900-0235-4c40-9d1e-1649448d7471\",\r\n        \"ClientId\": \"dasdasdas\",\r\n        \"TourId\": null,\r\n        \"PM\": \"aasdaads\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/orders/b8a7a900-0235-4c40-9d1e-1649448d7471",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders",
+						"b8a7a900-0235-4c40-9d1e-1649448d7471"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/orders/7720019f-2cb7-4b93-94b7-601e947119c6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders",
+						"7720019f-2cb7-4b93-94b7-601e947119c6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

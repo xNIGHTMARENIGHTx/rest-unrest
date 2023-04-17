@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "a537b146-4910-4f7e-8237-597f66666a04",
+		"name": "rest-unrest/agents",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26821021"
+	},
+	"item": [
+		{
+			"name": "agents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/agents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"agents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/agents/0fd438f0-90bf-4210-9991-0dd0de337e83",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"agents",
+						"0fd438f0-90bf-4210-9991-0dd0de337e83"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/agents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"agents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update agent",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"assssssssss\",\r\n    \"surname\": \"sa\",\r\n    \"phonenum\": \"+4444\",\r\n    \"email\": \"dadads@saddssda.com\",\r\n    \"login\": \"test1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/agents/0fd438f0-90bf-4210-9991-0dd0de337e83",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"agents",
+						"0fd438f0-90bf-4210-9991-0dd0de337e83"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete agent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/agents/bd33928e-a6a7-4127-94f2-5abf428bba9d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"agents",
+						"bd33928e-a6a7-4127-94f2-5abf428bba9d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

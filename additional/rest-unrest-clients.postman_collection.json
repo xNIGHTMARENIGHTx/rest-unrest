@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "42c08803-1301-4a9e-a1c5-27e24c407f12",
+		"name": "rest-unrest/clients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26821021"
+	},
+	"item": [
+		{
+			"name": "clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clients/469594aa-67f2-4356-bf1a-2136d98c3d49",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clients",
+						"469594aa-67f2-4356-bf1a-2136d98c3d49"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"as\",\r\n    \"surname\": \"sa\",\r\n    \"CT\": \"coadsa\",\r\n    \"login\": \"test2\",\r\n    \"password\": \"testtes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"as\",\r\n    \"surname\": \"sa\",\r\n    \"CT\": \"coadsa\",\r\n    \"login\": \"test3\",\r\n    \"password\": \"testtes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/clients/991ae468-5c36-473a-9220-d1c190baa014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clients",
+						"991ae468-5c36-473a-9220-d1c190baa014"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/clients/991ae468-5c36-473a-9220-d1c190baa014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"clients",
+						"991ae468-5c36-473a-9220-d1c190baa014"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

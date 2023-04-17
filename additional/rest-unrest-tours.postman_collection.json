@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "ad25182d-d70b-47b4-abf1-b0b86c422a17",
+		"name": "rest-unrest/tours",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26821021"
+	},
+	"item": [
+		{
+			"name": "tours",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/tours",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"tours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/tours/4334145c-ecc8-4ec5-a8ec-6bae840c11f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"tours",
+						"4334145c-ecc8-4ec5-a8ec-6bae840c11f2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create tour",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"as\",\r\n    \"country\": \"sa\",\r\n    \"price\": \"coadsa\",\r\n    \"duration\": \"test1\",\r\n    \"agentId\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/tours/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"tours",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update tour",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"as\",\r\n    \"country\": \"sa\",\r\n    \"price\": \"coadsa\",\r\n    \"duration\": \"test1\",\r\n    \"agentId\": \"1646b110-7f7c-4d7c-aba7-7822a940bd20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/tours/4c223690-09b0-490f-90ea-1877ecff24be",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"tours",
+						"4c223690-09b0-490f-90ea-1877ecff24be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete tour",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/tours/40c16df2-7a89-42db-a3ad-068b173c68bf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"tours",
+						"40c16df2-7a89-42db-a3ad-068b173c68bf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

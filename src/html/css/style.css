@@ -1,0 +1,73 @@
+:root {
+    --black: rgb(5, 5, 5);
+    --red-dark: rgb(100, 0, 0);
+    --red-light: rgb(255, 0, 0);
+}
+
+@font-face {
+    font-family: "pixel";
+    src: url("../fonts/Retro_Gaming.ttf");
+}
+
+body {
+    height: 100vh;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+p {
+    color: white;
+    font-family: pixel;
+    font-size: 30px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 23px;
+    border-bottom: 2px red solid;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    animation: menu-glow 5s infinite;
+}
+
+.menu button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.menu img {
+    height: 24px;
+}
+
+.pic-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-holder>div>img:has("axoltl") {
+    height: 469px;
+}
+
+@keyframes menu-glow {
+    0% {
+        border-color: var(--red-dark);
+    }
+
+    50% {
+        border-color: var(--red-light);
+    }
+
+    100% {
+        border-color: var(--red-dark);
+    }
+}

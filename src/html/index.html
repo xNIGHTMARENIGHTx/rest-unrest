@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @font-face {
-            font-family: "pixel";
-            src: url("./fonts/Retro_Gaming.ttf");
-        }
-        body {
-            height: 100vh;
-            background-color: rgb(5, 5, 5);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
-        p {
-            color: white;
-            font-family: pixel;
-            font-size: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BLEB</title>
 </head>
+
 <body>
-    <img src="./pics/pic.png" alt="Nami pic">
-    <p>[[[BIG SHOT]]]</p>
+    <nav class="menu">
+        <div class="controls">
+            <button>
+                <img src="./pics/icos/Cross.png" alt="cross">
+            </button>
+            <button>
+                <img src="./pics/icos/Cog.png" alt="cog">
+            </button>
+        </div>
+        <button>
+            <img src="./pics/icos/UnopenedMail.png" alt="mail" class="mail">
+        </button>
+    </nav>
+    <div class="pic-holder">
+        <div>
+            <img src="./pics/pic.png" alt="Nami pic">
+            <img src="./pics/axoltl.png" alt="axoltl">
+        </div>
+        <p>[[[BLEB]]]</p>
+    </div>
 </body>
+
 </html>
