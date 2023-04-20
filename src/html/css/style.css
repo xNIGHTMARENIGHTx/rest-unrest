@@ -33,7 +33,6 @@ p {
     border-bottom: 2px red solid;
     display: flex;
     justify-content: space-between;
-    animation: menu-glow 10s infinite;
 }
 
 .menu button {
@@ -43,14 +42,12 @@ p {
 }
 
 .menu img:hover{
-    box-shadow: 0 0 2px 2px red;
+    box-shadow: 0 -1px 2px 2px var(--red-light);
 }
 
 .menu img {
-    border: 1px var(--red-dark) solid;
-    animation: menu-glow 10s;
+    border: 1px var(--red-light) solid;
     height: 23px;
-    transition: all 0.2s ease-in-out;
 }
 
 .pic-holder {
@@ -62,18 +59,4 @@ p {
 
 .pic-holder>div>img:has("axoltl") {
     height: 469px;
-}
-
-@keyframes menu-glow {
-    0% {
-        border-color: var(--red-dark);
-    }
-
-    50% {
-        border-color: var(--red-light);
-    }
-
-    100% {
-        border-color: var(--red-dark);
-    }
 }
