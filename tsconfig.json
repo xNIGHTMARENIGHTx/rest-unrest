@@ -23,6 +23,9 @@
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true
     },
+    "ts-node": {
+        "esm": true,
+    },
     "exclude": [
         "node_modules"
     ],
