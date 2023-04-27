@@ -7,9 +7,9 @@
   },
   "type": "module",
   "description": "nodejs-mitso",
-  "main": "src/server.js",
+  "main": "src/server.ts",
   "scripts": {
-    "start": "nodemon src/server.js",
+    "start": "nodemon src/server.ts",
     "lint": "eslint --ext .js,.ts --fix src/"
   },
   "keywords": [
