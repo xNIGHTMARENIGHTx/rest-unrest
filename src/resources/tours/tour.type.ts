@@ -4,7 +4,7 @@ export interface TTour {
     price: string;
     duration: string;
     agentId: string;
-  }
+}
 
 export interface TTourModel extends TTour {
     id: string;

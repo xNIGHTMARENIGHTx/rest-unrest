@@ -4,9 +4,9 @@ import { TTour, TTourModel } from './tour.type.js';
 
 const getAll = (): Promise<TTourModel[]> => toursRepo.getAll();
 const getById = (id: string): Promise<TTourModel | null> => toursRepo.getById(id);
-const createTour= (tour: TTour): Promise<TTourModel> =>
+const createTour = (tour: TTour): Promise<TTourModel> =>
     toursRepo.create(tour);
-const deleteById = async (id: string): Promise<TTourModel | null> =>{
+const deleteById = async (id: string): Promise<TTourModel | null> => {
     const tour = await toursRepo.getById(id);
     toursRepo.deleteById(id);
     ordersRepo.deleteByTourId(id);
@@ -16,10 +16,10 @@ const deleteById = async (id: string): Promise<TTourModel | null> =>{
 const update = (tour: TTourModel): Promise<TTourModel | null> =>
     toursRepo.update(tour);
 
-export { 
+export {
     getAll,
     getById,
     createTour,
     deleteById,
-    update 
+    update
 };
