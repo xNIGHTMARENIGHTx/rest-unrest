@@ -1,4 +1,4 @@
-import { Router, Request, Response} from 'express';
+import { Router, Request, Response } from 'express';
 import { StatusCodes } from "http-status-codes";
 
 import Agent from './agent.model.js';
